@@ -1,0 +1,128 @@
+:root {
+    --flickr-pink: #F72585;
+    --byzantine: #B5179E;
+    --purple: #7209B7;
+    --trypan-blue:#480CA8;
+    --persian-blue: #3F37C9;
+    --ultramarine-blue: #4361EE;
+    --dodger-blue: 4895EF;
+    --sky-blue: #4cc9f0;
+    --text: #e0eae4;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--flickr-pink);
+}
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+}
+
+h1,
+h2, 
+h3, 
+h4, 
+h5 {
+    margin-bottom: 0.625rem;
+    color: var(--sky-blue);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.75rem;
+}
+
+h4 {
+    font-size: 2.75rem;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav a {
+    color: var(--persian-blue);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.about-me img {
+    width: 100%;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+
+}
+
+.card img {
+    width: 100%;
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .card-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-column: :last-child {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+    }
+
+    .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
