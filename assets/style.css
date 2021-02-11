@@ -157,6 +157,10 @@ margin: 1% auto;
     width: 100%;
 }
 
+.card img:hover {
+    transform: scale(1.1);
+}
+
 #contact-me-header {
     width: 96%;
     margin: 0 auto;
@@ -169,7 +173,7 @@ margin: 1% auto;
     justify-content: space-around;
     flex-direction: row;
     color: var(--ultramarine-blue);
-    font-size: 1%;
+    font-size: 150%;
     padding-top: 10px;
     padding-bottom: 40px;
 }
@@ -208,6 +212,10 @@ margin: 1% auto;
 
     .card-column: last-child {
         flex-grow: 1;
+    }
+
+    .projects {
+        justify-content: center;
     }
 }
 
