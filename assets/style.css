@@ -10,6 +10,10 @@
     --text: #e0eae4;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.75rem;
@@ -39,7 +43,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h3 {
@@ -47,11 +51,13 @@ h3 {
 }
 
 h4 {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
 }
 
 header {
-    padding: 40px;
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
     text-align: center;
 }
 
@@ -75,8 +81,49 @@ header nav a {
     text-align: center;
 }
 
+.about-me {
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+width: 90%;
+margin: 1% auto;
+}
+
 .about-me img {
     width: 100%;
+}
+
+.about-me-description {
+    margin-left: 3%;
+    margin-right: 3%;
+    flex: 0 0 40%;
+}
+
+.about-me-list ul {
+    list-style: none;
+    margin-left: 1em;
+    font-size: 85%;
+    line-height: 2;
+}
+
+.about-me-list ul li::before {
+    content: "\2022";
+    color: var(--purple);
+    font-weight: bold;
+    display: inline-block;
+    width: 0.5em;
+}
+
+#about-me-list-header {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+#projects-header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1.2rem;
+    text-align: center;
 }
 
 .projects {
@@ -93,25 +140,73 @@ header nav a {
 }
 
 .card {
+    position: relative;
+}
 
+
+.card .card-header {
+    position: absolute;
+    margin: +10rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--persian-blue);
+    color: var(--text);
+    border: 2px solid var(--sky-blue);
 }
 
 .card img {
     width: 100%;
 }
 
+#contact-me-header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1.2rem;
+    text-align: center;
+}
 
-
-
+.icons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: var(--ultramarine-blue);
+    font-size: 1%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
 
 
 @media screen and (min-width: 768px) {
+    .about-me {
+        flex-direction: row;
+    }
+        
+    .about-me img {
+        flex: 0 0 40%;
+    }
+
+    .about-me-description {
+        flex: 0 0 40%;
+    }
+
+    .about-me-list {
+        flex: 0 0 20%;
+        margin-left: 1em;
+    }
+
+    #about-me-list-header {
+        margin-left: -1em;
+        margin-top: -1em;
+    }
+    .about-me-list ul li::before {
+        margin-left: -2em;
+    }
+
     .card-column {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    .card-column: :last-child {
+    .card-column: last-child {
         flex-grow: 1;
     }
 }
