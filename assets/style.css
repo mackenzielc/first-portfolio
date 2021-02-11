@@ -143,6 +143,13 @@ margin: 1% auto;
     position: relative;
 }
 
+.card img {
+    width: 100%;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
 
 .card .card-header {
     position: absolute;
@@ -153,12 +160,8 @@ margin: 1% auto;
     border: 2px solid var(--sky-blue);
 }
 
-.card img {
-    width: 100%;
-}
-
-.card img:hover {
-    transform: scale(1.1);
+.card-header {
+    ;
 }
 
 #contact-me-header {
